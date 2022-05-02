@@ -1,7 +1,6 @@
 public class oddIndices {
     public static int[] OddIndices(int[] array) {
 
-
         int[] output;
         if (array.length == 0) return null;
         else {
