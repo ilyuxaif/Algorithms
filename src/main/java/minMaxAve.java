@@ -2,23 +2,23 @@ import java.util.Arrays;
 
 public class minMaxAve {
 
-    public static int[] MinMaxAve(int[] array, int index1, int index2) {
+    public int[] MinMaxAve(int[] array, int index1, int index2) {
 
-        int[] output = new int[3];
         int sum = 0;
-        int[] array2 = new int[index2 - index1 + 1];
-        for (int i = index1, j = 0; i <= index2; i ++) {
-            array2[j] = array[i];
-            j++;
+        int minValue = array[index1];
+        int maxValue = array[index2];
+
+        if (array == null || index2 < index1 || index1 < 0 || index2 < 0 || array.length < index2 || array.length < 1) {
+            return new int[]{};
         }
-        for (int i : array2) {sum += i;}
 
-        Arrays.sort(array2);
-        output[0] = array2[0];
-        output[1] = array2[array2.length - 1];
-        output[2] = sum / array2.length;
+        for (int i = index1; i <= index2; i ++) {
+            if (minValue > array[i]) minValue = array[i];
+            if (maxValue < array[i]) maxValue = array[i];
+            sum += i;
+        }
 
-        return output;
+        return new int[] {minValue, maxValue, (sum / (index2 - index1 + 1))};
     }
 
 }

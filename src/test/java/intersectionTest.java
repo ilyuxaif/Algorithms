@@ -20,7 +20,7 @@ class intersectionTest {
 
         int[] expectedResult = {2, 4};
         int[] actualResult = as.Intersection(initialArray, checkedNumbersArray);
-        assertEquals(Arrays.toString(expectedResult), Arrays.toString(actualResult));
+        assertArrayEquals(expectedResult, actualResult);
     }
 
     @Test
@@ -30,7 +30,7 @@ class intersectionTest {
 
         int[] expectedResult = {-2, -4};
         int[] actualResult = as.Intersection(initialArray, checkedNumbersArray);
-        assertEquals(Arrays.toString(expectedResult), Arrays.toString(actualResult));
+        assertArrayEquals(expectedResult, actualResult);
     }
 
     @Test
@@ -40,7 +40,7 @@ class intersectionTest {
 
         int[] expectedResult = {};
         int[] actualResult = as.Intersection(initialArray, checkedNumbersArray);
-        assertEquals(Arrays.toString(expectedResult), Arrays.toString(actualResult));
+        assertArrayEquals(expectedResult, actualResult);
     }
 
     @Test
@@ -50,7 +50,7 @@ class intersectionTest {
 
         int[] expectedResult = {-2, -4};
         int[] actualResult = as.Intersection(initialArray, checkedNumbersArray);
-        assertNotEquals(Arrays.toString(expectedResult), Arrays.toString(actualResult));
+        assertFalse(Arrays.equals(expectedResult, actualResult));
     }
 
     @Test
@@ -60,7 +60,7 @@ class intersectionTest {
 
         int[] expectedResult = {2, 4};
         int[] actualResult = as.Intersection(initialArray, checkedNumbersArray);
-        assertNotEquals(Arrays.toString(expectedResult), Arrays.toString(actualResult));
+        assertFalse(Arrays.equals(expectedResult, actualResult));
     }
 
     @Test
@@ -70,6 +70,6 @@ class intersectionTest {
 
         int[] expectedResult = {2, 4};
         int[] actualResult = as.Intersection(initialArray, checkedNumbersArray);
-        assertNotEquals(Arrays.toString(expectedResult), Arrays.toString(actualResult));
+        assertFalse(Arrays.equals(expectedResult, actualResult));
     }
 }

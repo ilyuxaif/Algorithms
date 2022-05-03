@@ -10,7 +10,6 @@ public class intersection {
             int[] output = new int[array1.length];
             int count = 0;
 
-
             for (int j : array1) {
                 for (int k : array2) {
                     if (j == k) {
